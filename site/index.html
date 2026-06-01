@@ -261,7 +261,7 @@
     <div class="stats">
       <span class="stat"><strong>10</strong> 篇精选</span>
       <span class="stat">从 <strong>62</strong> 篇候选</span>
-      <span class="stat">LLM 训练 / 微调 <strong>3</strong> · 多模态 / VLM <strong>2</strong> · 音频 / 语音 <strong>1</strong> · 理论 / 优化 <strong>1</strong></span>
+      <span class="stat">多模态 / VLM <strong>2</strong> · LLM 训练 / 微调 <strong>2</strong> · 对齐 / 安全 <strong>1</strong> · 理论 / 优化 <strong>1</strong></span>
     </div>
   </header>
 
@@ -273,16 +273,16 @@
     </div>
     <h2><a href="https://arxiv.org/abs/2605.31604v1" target="_blank" rel="noopener">Representation Forcing for Bottleneck-Free Unified Multimodal Models</a></h2>
     <p class="authors">Yuqing Wang · Zhijie Lin · Ceyuan Yang · et al.</p>
-    <p class="highlight">去VAE瓶颈的统一多模态生成新范式</p>
-    <p class="brief">针对统一多模态模型依赖冻结VAE导致生成质量受限的结构性瓶颈，提出Representation Forcing方法，让单一模型在统一训练中兼顾感知与高质量生成，无需独立预训练VAE。</p>
+    <p class="highlight">无VAE瓶颈的统一多模态建模范式</p>
+    <p class="brief">针对统一多模态模型依赖冻结VAE导致生成质量瓶颈的问题，提出Representation Forcing扩散式训练机制，让单一Transformer同时承担理解与生成，摆脱外部解码器。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>去除冻结VAE结构瓶颈</li>
-<li>统一训练兼顾感知与生成</li>
-<li>保持高保真图像质量</li></ul>
+    <ul class="advantages"><li>消除VAE结构瓶颈</li>
+<li>扩散式统一表征学习</li>
+<li>单模型兼顾理解生成</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>统一多模态理解与生成</li>
-<li>图文/视频多任务模型</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>对下一代原生多模态模型架构有重要参考价值，值得所有多模态研究者关注。</div>
+    <ul class="scenarios"><li>图文统一生成</li>
+<li>多模态对话系统</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>为下一代统一多模态架构提供新范式，对构建原生多模态基础模型有重要参考价值。</div>
     <div class="links">
       <a href="https://arxiv.org/abs/2605.31604v1" target="_blank" rel="noopener">📄 Abstract</a>
       <a href="https://arxiv.org/pdf/2605.31604v1" target="_blank" rel="noopener">📥 PDF</a>
@@ -293,46 +293,21 @@
   <article class="card">
     <div class="card-head">
       <span class="rank">#2</span>
-      <span class="cat">LLM 训练 / 微调</span>
-      <span class="primary-cat">CL</span>
-    </div>
-    <h2><a href="https://arxiv.org/abs/2605.31584v1" target="_blank" rel="noopener">LongTraceRL: Learning Long-Context Reasoning from Search Agent Trajectories with Rubric Rewards</a></h2>
-    <p class="authors">Nianyi Lin · Jiajie Zhang · Lei Hou · et al.</p>
-    <p class="highlight">长上下文推理的强化学习新框架</p>
-    <p class="brief">提出LongTraceRL，基于搜索Agent轨迹的Rubric奖励进行RLVR训练，针对长上下文中定位关键信息的难题，提升模型在大量干扰内容中推理的鲁棒性。</p>
-    <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>Rubric奖励增强长程信号</li>
-<li>利用搜索Agent轨迹训练</li>
-<li>显著提升长上下文推理</li></ul>
-    <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>长文档问答与分析</li>
-<li>深度搜索与Agent推理</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>为长上下文与Agent推理的强化学习提供了可复现的工程化方案，对RAG/Agent团队非常实用。</div>
-    <div class="links">
-      <a href="https://arxiv.org/abs/2605.31584v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2605.31584v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2605.31584v1" target="_blank" rel="noopener">🌐 HTML</a>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="card-head">
-      <span class="rank">#3</span>
-      <span class="cat">LLM 训练 / 微调</span>
+      <span class="cat">对齐 / 安全</span>
       <span class="primary-cat">CL</span>
     </div>
     <h2><a href="https://arxiv.org/abs/2605.31494v1" target="_blank" rel="noopener">Consolidating Rewarded Perturbations for LLM Post-Training</a></h2>
     <p class="authors">Zheyu Zhang · Shuo Yang · Gjergji Kasneci</p>
-    <p class="highlight">权重空间集成的新后训练范式</p>
-    <p class="brief">提出Consolidating Rewarded Perturbations，将LLM后训练从样本-分数-更新循环迁移到权重空间：对预训练模型施加高斯扰动采样，按奖励筛选并集成top-K专家权重。</p>
+    <p class="highlight">权重空间扰动整合的LLM后训练新范式</p>
+    <p class="brief">改进RandOpt思路，将多次有奖励的高斯扰动模型在权重空间合并为单一后训练模型，避免推理时多模型集成开销，并提供稳定的后训练新路径。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>权重空间而非梯度后训练</li>
-<li>Top-K奖励扰动集成</li>
-<li>避免采样成本高的迭代循环</li></ul>
+    <ul class="advantages"><li>权重空间扰动合并</li>
+<li>免推理时多模型开销</li>
+<li>稳定的后训练新路径</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>RLHF替代式模型微调</li>
-<li>小模型能力快速增强</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>为RandOpt路线提供更系统的集成方法，是LLM后训练新范式的关键进展。</div>
+    <ul class="scenarios"><li>LLM对齐后训练</li>
+<li>奖励模型微调</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>提出绕开SGD后训练的新思路，对轻量对齐与部署极具工程价值。</div>
     <div class="links">
       <a href="https://arxiv.org/abs/2605.31494v1" target="_blank" rel="noopener">📄 Abstract</a>
       <a href="https://arxiv.org/pdf/2605.31494v1" target="_blank" rel="noopener">📥 PDF</a>
@@ -342,47 +317,22 @@
 
   <article class="card">
     <div class="card-head">
-      <span class="rank">#4</span>
-      <span class="cat">音频 / 语音</span>
-      <span class="primary-cat">CL</span>
-    </div>
-    <h2><a href="https://arxiv.org/abs/2605.31521v1" target="_blank" rel="noopener">UniAudio-Token: Empowering Semantic Speech Tokenizers with General Audio Perception</a></h2>
-    <p class="authors">Yuhan Song · Linhao Zhang · Aiwei Liu · et al.</p>
-    <p class="highlight">通用音频感知的语义语音分词器</p>
-    <p class="brief">针对Audio-LLM中语义语音分词器存在声学盲区的问题，提出UniAudio-Token，将通用音频感知能力注入语义分词器，扩展其在语音以外任务上的适用性。</p>
-    <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>突破语义分词器声学盲区</li>
-<li>保持紧凑单码本设计</li>
-<li>支持语音与通用音频</li></ul>
-    <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>Audio-LLM语音对话</li>
-<li>多模态通用音频理解</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>对Audio-LLM的底层接口改进，是语音-语言大模型关键基础设施的进展。</div>
-    <div class="links">
-      <a href="https://arxiv.org/abs/2605.31521v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2605.31521v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2605.31521v1" target="_blank" rel="noopener">🌐 HTML</a>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="card-head">
-      <span class="rank">#5</span>
+      <span class="rank">#3</span>
       <span class="cat">多模态 / VLM</span>
       <span class="primary-cat">CV</span>
     </div>
     <h2><a href="https://arxiv.org/abs/2605.31598v1" target="_blank" rel="noopener">Linear Scaling Video VLMs for Long Video Understanding</a></h2>
     <p class="authors">Cristobal Eyzaguirre · Jiajun Wu · Juan Carlos Niebles</p>
-    <p class="highlight">长视频VLM的线性复杂度编码器</p>
-    <p class="brief">针对视频VLM时空自注意力随帧数平方级膨胀的瓶颈，提出线性扩展的编码器方案，使长视频、流式视频理解的计算与延迟可控。</p>
+    <p class="highlight">视频VLM实现线性复杂度长视频理解</p>
+    <p class="brief">针对视频VLM时空自注意力随帧数二次增长、难以处理长视频的问题，提出线性扩展的视频编码架构，在保持性能的同时大幅降低长视频推理延迟。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>线性复杂度视频编码</li>
-<li>适配长视频与流式场景</li>
-<li>保持表征能力</li></ul>
+    <ul class="advantages"><li>视频注意力线性扩展</li>
+<li>支持流式长视频</li>
+<li>显著降低推理延迟</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>长视频问答与摘要</li>
-<li>实时流式视频理解</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>对长视频VLM工业化部署有直接价值，是解决视频LLM规模化痛点的关键工作。</div>
+    <ul class="scenarios"><li>长视频理解</li>
+<li>流式视频分析</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>长视频是VLM落地关键瓶颈，线性扩展对实际部署至关重要。</div>
     <div class="links">
       <a href="https://arxiv.org/abs/2605.31598v1" target="_blank" rel="noopener">📄 Abstract</a>
       <a href="https://arxiv.org/pdf/2605.31598v1" target="_blank" rel="noopener">📥 PDF</a>
@@ -392,47 +342,122 @@
 
   <article class="card">
     <div class="card-head">
-      <span class="rank">#6</span>
+      <span class="rank">#4</span>
+      <span class="cat">LLM 训练 / 微调</span>
+      <span class="primary-cat">CL</span>
+    </div>
+    <h2><a href="https://arxiv.org/abs/2605.31584v1" target="_blank" rel="noopener">LongTraceRL: Learning Long-Context Reasoning from Search Agent Trajectories with Rubric Rewards</a></h2>
+    <p class="authors">Nianyi Lin · Jiajie Zhang · Lei Hou · et al.</p>
+    <p class="highlight">面向搜索智能体的长上下文RL训练框架</p>
+    <p class="brief">通过让模型在搜索代理产生的长轨迹上结合Rubric奖励做RLVR训练，解决LLM难以在冗长上下文中定位并整合关键证据的问题。</p>
+    <div class="section-label">核心优势</div>
+    <ul class="advantages"><li>Rubric奖励引导RL</li>
+<li>复用搜索代理轨迹</li>
+<li>强化长程证据整合</li></ul>
+    <div class="section-label">应用场景</div>
+    <ul class="scenarios"><li>深度研究助手</li>
+<li>长文档问答</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>给出可复现的RLVR训练配方，对长上下文推理研究直接可用。</div>
+    <div class="links">
+      <a href="https://arxiv.org/abs/2605.31584v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2605.31584v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2605.31584v1" target="_blank" rel="noopener">🌐 HTML</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-head">
+      <span class="rank">#5</span>
       <span class="cat">理论 / 优化</span>
       <span class="primary-cat">LG</span>
     </div>
-    <h2><a href="https://arxiv.org/abs/2605.31518v1" target="_blank" rel="noopener">On the Relationship Between Activation Outliers and Feature Death in Sparse Autoencoders</a></h2>
-    <p class="authors">Elana Simon · Etowah Adams · James Zou</p>
-    <p class="highlight">SAE特征死亡的机制性新发现</p>
-    <p class="brief">系统研究稀疏自编码器中激活异常值与特征死亡的关联，解释为何不同LLM上SAE特征死亡率差异巨大，揭示字典容量浪费与叠加现象的根源。</p>
+    <h2><a href="https://arxiv.org/abs/2605.31463v1" target="_blank" rel="noopener">PithTrain: A Compact and Agent-Native MoE Training System</a></h2>
+    <p class="authors">Ruihang Lai · Hao Kang · Haozhan Tang · et al.</p>
+    <p class="highlight">紧凑型Agent原生MoE训练系统</p>
+    <p class="brief">PithTrain是面向MoE架构的紧凑型训练系统，通过专家路由、内存与调度协同优化，以更小工程开销适配新架构与Agent场景。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>揭示SAE死亡机制</li>
-<li>跨模型对比分析</li>
-<li>为SAE设计提供理论依据</li></ul>
+    <ul class="advantages"><li>Agent原生调度</li>
+<li>高效MoE训练栈</li>
+<li>易扩展新架构</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>LLM可解释性研究</li>
-<li>SAE训练策略优化</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>James Zou团队出品，对做机制可解释性的研究者和实践SAE的工程师都极具参考价值。</div>
+    <ul class="scenarios"><li>大规模MoE预训练</li>
+<li>Agent模型训练</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>MoE是前沿模型主流，系统级创新直接影响未来模型能力上限。</div>
     <div class="links">
-      <a href="https://arxiv.org/abs/2605.31518v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2605.31518v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2605.31518v1" target="_blank" rel="noopener">🌐 HTML</a>
+      <a href="https://arxiv.org/abs/2605.31463v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2605.31463v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2605.31463v1" target="_blank" rel="noopener">🌐 HTML</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-head">
+      <span class="rank">#6</span>
+      <span class="cat">音频 / 语音</span>
+      <span class="primary-cat">CL</span>
+    </div>
+    <h2><a href="https://arxiv.org/abs/2605.31521v1" target="_blank" rel="noopener">UniAudio-Token: Empowering Semantic Speech Tokenizers with General Audio Perception</a></h2>
+    <p class="authors">Yuhan Song · Linhao Zhang · Aiwei Liu · et al.</p>
+    <p class="highlight">通用音频感知的语义语音Tokenizer</p>
+    <p class="brief">提出UniAudio-Token，为语义语音tokenizer注入通用音频感知能力，缓解其声学盲区，显著提升Audio-LLM在非语音音频任务上的表现。</p>
+    <div class="section-label">核心优势</div>
+    <ul class="advantages"><li>声学信息扩展</li>
+<li>统一语音与音频</li>
+<li>提升Audio-LLM泛化</li></ul>
+    <div class="section-label">应用场景</div>
+    <ul class="scenarios"><li>音频问答系统</li>
+<li>多模态语音助手</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>解决Audio-LLM核心组件的能力盲区，对通用音频理解模型有关键意义。</div>
+    <div class="links">
+      <a href="https://arxiv.org/abs/2605.31521v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2605.31521v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2605.31521v1" target="_blank" rel="noopener">🌐 HTML</a>
     </div>
   </article>
 
   <article class="card">
     <div class="card-head">
       <span class="rank">#7</span>
+      <span class="cat">Agent / 工具调用</span>
+      <span class="primary-cat">LG</span>
+    </div>
+    <h2><a href="https://arxiv.org/abs/2605.31509v1" target="_blank" rel="noopener">Skill Reuse as Compression in Agentic RL</a></h2>
+    <p class="authors">Zhikun Xu · Yu Feng · Jacob Dineen · et al.</p>
+    <p class="highlight">把技能复用当作压缩的Agent强化学习</p>
+    <p class="brief">提出核心假设：Agent成功轨迹越能压缩为少量可复用抽象模式，其在新任务上泛化越好；据此设计技能复用机制改进Agentic RL训练。</p>
+    <div class="section-label">核心优势</div>
+    <ul class="advantages"><li>轨迹结构压缩视角</li>
+<li>抽象技能复用机制</li>
+<li>改善Agent泛化能力</li></ul>
+    <div class="section-label">应用场景</div>
+    <ul class="scenarios"><li>工具调用Agent</li>
+<li>多步任务规划</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>为解决Agent RL过拟合与脆弱性问题提供新理论视角。</div>
+    <div class="links">
+      <a href="https://arxiv.org/abs/2605.31509v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2605.31509v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2605.31509v1" target="_blank" rel="noopener">🌐 HTML</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-head">
+      <span class="rank">#8</span>
       <span class="cat">LLM 推理 / 加速</span>
       <span class="primary-cat">AI</span>
     </div>
     <h2><a href="https://arxiv.org/abs/2605.31492v1" target="_blank" rel="noopener">LinTree: Improving LLM Reasoning with Explicitly Structured Search Histories</a></h2>
     <p class="authors">Liwei Kang · Yee Whye Teh · Wee Sun Lee</p>
-    <p class="highlight">显式结构化搜索历史提升推理</p>
-    <p class="brief">将LLM推理轨迹视为线性化搜索树，提出LinTree方法，通过显式结构化搜索历史来组织探索、回溯与分支，提升复杂推理任务的表现。</p>
+    <p class="highlight">显式结构化搜索历史的LLM推理增强</p>
+    <p class="brief">LinTree把LLM推理轨迹视作线性化搜索树，显式维护搜索历史并支持回溯与剪枝，从而提升模型在复杂任务中的推理稳定性。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>搜索树显式结构化</li>
-<li>更高效的回溯与分支</li>
-<li>提升复杂推理准确率</li></ul>
+    <ul class="advantages"><li>显式搜索历史结构</li>
+<li>支持回溯与剪枝</li>
+<li>提升复杂推理稳定性</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>数学与逻辑推理</li>
-<li>多步Agent规划</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>为LLM推理的结构化增强提供了简洁且可工程落地的方案。</div>
+    <ul class="scenarios"><li>数学证明</li>
+<li>代码生成推理</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>把搜索算法显式引入LLM推理，是改进推理质量的新方向。</div>
     <div class="links">
       <a href="https://arxiv.org/abs/2605.31492v1" target="_blank" rel="noopener">📄 Abstract</a>
       <a href="https://arxiv.org/pdf/2605.31492v1" target="_blank" rel="noopener">📥 PDF</a>
@@ -442,51 +467,26 @@
 
   <article class="card">
     <div class="card-head">
-      <span class="rank">#8</span>
-      <span class="cat">代码 / 程序合成</span>
-      <span class="primary-cat">LG</span>
-    </div>
-    <h2><a href="https://arxiv.org/abs/2605.31464v1" target="_blank" rel="noopener">GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization</a></h2>
-    <p class="authors">Zaid Khan · Justin Chih-Yao Chen · Jaemin Cho · et al.</p>
-    <p class="highlight">LLM作为GPU核运行时选择代理</p>
-    <p class="brief">提出GPU Forecasters，用语言模型在核优化过程中选择性替代真实硬件测量，降低核搜索评估成本，加速自动调优与编程Agent的迭代。</p>
-    <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>以LLM选择性替代测量</li>
-<li>显著降低评估开销</li>
-<li>与核搜索/编码Agent结合</li></ul>
-    <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>GPU算子自动调优</li>
-<li>AI for Systems代码Agent</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>Mohit Bansal团队，将LLM用于系统优化的关键基础设施工作，工程价值高。</div>
-    <div class="links">
-      <a href="https://arxiv.org/abs/2605.31464v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2605.31464v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2605.31464v1" target="_blank" rel="noopener">🌐 HTML</a>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="card-head">
       <span class="rank">#9</span>
-      <span class="cat">Agent / 工具调用</span>
-      <span class="primary-cat">LG</span>
+      <span class="cat">3D / 视觉生成</span>
+      <span class="primary-cat">CV</span>
     </div>
-    <h2><a href="https://arxiv.org/abs/2605.31509v1" target="_blank" rel="noopener">Skill Reuse as Compression in Agentic RL</a></h2>
-    <p class="authors">Zhikun Xu · Yu Feng · Jacob Dineen · et al.</p>
-    <p class="highlight">技能复用即压缩的Agentic RL</p>
-    <p class="brief">提出把智能体成功轨迹视为可压缩的抽象模式集合，通过技能复用提升强化学习Agent的泛化能力，避免学习到脆弱的任务特定捷径。</p>
+    <h2><a href="https://arxiv.org/abs/2605.31590v1" target="_blank" rel="noopener">TunerDiT: Training-free Progressive Steering of Diffusion Transformer for Multi-Event Video Generation</a></h2>
+    <p class="authors">Ruotong Liao · Guowen Huang · Qing Cheng · et al.</p>
+    <p class="highlight">免训练渐进引导的多事件视频生成</p>
+    <p class="brief">TunerDiT无需额外训练，通过在DiT去噪轨迹的内在转折点进行渐进式引导，控制长视频中多事件切换并提升整体生成质量。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>轨迹可压缩性视角</li>
-<li>抽象技能复用机制</li>
-<li>缓解过拟合捷径</li></ul>
+    <ul class="advantages"><li>训练免费引导机制</li>
+<li>利用DiT内在转折点</li>
+<li>支持多事件长视频</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>多任务LLM Agent训练</li>
-<li>工具调用与规划Agent</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>为Agentic RL的泛化问题提供了信息论式的新视角与训练范式。</div>
+    <ul class="scenarios"><li>电影级长视频生成</li>
+<li>广告创意视频</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>训练免费方法实用价值高，为可控长视频生成提供新工具。</div>
     <div class="links">
-      <a href="https://arxiv.org/abs/2605.31509v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2605.31509v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2605.31509v1" target="_blank" rel="noopener">🌐 HTML</a>
+      <a href="https://arxiv.org/abs/2605.31590v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2605.31590v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2605.31590v1" target="_blank" rel="noopener">🌐 HTML</a>
     </div>
   </article>
 
@@ -498,16 +498,16 @@
     </div>
     <h2><a href="https://arxiv.org/abs/2605.31455v1" target="_blank" rel="noopener">DRIFT: Decoupled Rollouts and Importance-Weighted Fine-Tuning for Efficient Multi-Turn Optimization</a></h2>
     <p class="authors">Jian Mu · Tianyi Lin · Chengwei Qin · et al.</p>
-    <p class="highlight">多轮RL的高效解耦微调框架</p>
-    <p class="brief">针对多轮交互场景中在线RL成本高的问题，提出DRIFT框架，将Rollout与重要性加权微调解耦，实现高效的多轮优化。</p>
+    <p class="highlight">解耦rollout的多轮LLM高效优化</p>
+    <p class="brief">DRIFT将多轮LLM优化中的在线rollout与策略微调解耦，并结合重要性加权，从而显著降低多轮交互训练成本同时保持效果。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>Rollout与微调解耦</li>
-<li>重要性加权降低方差</li>
-<li>显著提升多轮训练效率</li></ul>
+    <ul class="advantages"><li>解耦rollout与更新</li>
+<li>重要性加权高效</li>
+<li>降低多轮训练成本</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>多轮对话模型优化</li>
-<li>交互式Agent RLHF</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>对部署多轮LLM/Agent的团队而言，是降低RL训练成本的关键方法。</div>
+    <ul class="scenarios"><li>多轮对话模型训练</li>
+<li>交互式Agent学习</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>直接缓解多轮RL的高昂成本，对实用化LLM Agent训练意义重大。</div>
     <div class="links">
       <a href="https://arxiv.org/abs/2605.31455v1" target="_blank" rel="noopener">📄 Abstract</a>
       <a href="https://arxiv.org/pdf/2605.31455v1" target="_blank" rel="noopener">📥 PDF</a>
@@ -520,7 +520,7 @@
       数据来源：<a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv.org</a> (cs.AI · cs.LG · cs.CL · cs.CV) ·
       分析：<a href="https://github.com/MiniMax-AI" target="_blank" rel="noopener">MiniMax-M3</a>
     </p>
-    <p>自动生成于 2026-06-01 17:29 · <a href="archive.html">历史归档</a></p>
+    <p>自动生成于 2026-06-01 20:04 · <a href="archive.html">历史归档</a></p>
   </footer>
 </div>
 </body>
