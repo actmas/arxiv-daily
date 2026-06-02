@@ -261,7 +261,7 @@
     <div class="stats">
       <span class="stat"><strong>10</strong> 篇精选</span>
       <span class="stat">从 <strong>61</strong> 篇候选</span>
-      <span class="stat">多模态 / VLM <strong>3</strong> · 机器人 / 具身 <strong>2</strong> · LLM 推理 / 加速 <strong>1</strong> · 3D / 视觉生成 <strong>1</strong></span>
+      <span class="stat">3D / 视觉生成 <strong>3</strong> · LLM 推理 / 加速 <strong>2</strong> · Agent / 工具调用 <strong>2</strong> · 多模态 / VLM <strong>1</strong></span>
     </div>
   </header>
 
@@ -273,16 +273,16 @@
     </div>
     <h2><a href="https://arxiv.org/abs/2606.02544v1" target="_blank" rel="noopener">SimSD: Simple Speculative Decoding in Diffusion Language Models</a></h2>
     <p class="authors">Junxia Cui · Haotian Ye · Runchu Tian · et al.</p>
-    <p class="highlight">扩散语言模型的简易投机解码加速</p>
-    <p class="brief">针对扩散大语言模型(dLLM)与标准token级投机解码不兼容的问题，提出SimSD方法，首次让扩散语言模型获得投机解码能力，显著加速其并行/分块式推理。</p>
+    <p class="highlight">首个面向扩散大模型的推测解码框架</p>
+    <p class="brief">扩散语言模型推理加速难，提出简易推测解码SimSD框架，兼容屏蔽式与块并行解码，显著提升dLLM吞吐量。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>首次支持dLLM投机解码</li>
-<li>兼容并行分块解码</li>
-<li>即插即用易部署</li></ul>
+    <ul class="advantages"><li>首个面向dLLM的推测解码方案</li>
+<li>兼容块并行解码模式</li>
+<li>即插即用吞吐量大幅提升</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>dLLM推理加速</li>
-<li>并行文本生成</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>对快速兴起的扩散语言模型社区关键，提供立即可用的加速方案</div>
+    <ul class="scenarios"><li>扩散语言模型推理加速</li>
+<li>文本生成服务部署</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>为新兴dLLM范式提供关键加速工具，对研究者与工程部署者都极具价值。</div>
     <div class="links">
       <a href="https://arxiv.org/abs/2606.02544v1" target="_blank" rel="noopener">📄 Abstract</a>
       <a href="https://arxiv.org/pdf/2606.02544v1" target="_blank" rel="noopener">📥 PDF</a>
@@ -298,16 +298,16 @@
     </div>
     <h2><a href="https://arxiv.org/abs/2606.02553v1" target="_blank" rel="noopener">LongLive-RAG: A General Retrieval-Augmented Framework for Long Video Generation</a></h2>
     <p class="authors">Qixin Hu · Shuai Yang · Wei Huang · et al.</p>
-    <p class="highlight">长视频生成的通用检索增强框架</p>
-    <p class="brief">针对自回归视频扩散中长时程生成的累积误差和身份漂移问题，提出LongLive-RAG框架，通过检索机制管理可变长度合成，提升长视频生成质量。</p>
+    <p class="highlight">检索增强实现长视频可变长生成</p>
+    <p class="brief">针对长视频自回归生成中的误差累积与身份漂移，提出检索增强框架LongLive-RAG，支持变长高质量合成。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>长视频检索增强</li>
-<li>有效抑制身份漂移</li>
-<li>支持可变长合成</li></ul>
+    <ul class="advantages"><li>检索增强缓解长程漂移</li>
+<li>支持变长视频生成</li>
+<li>滑动窗口注意力高效</li></ul>
     <div class="section-label">应用场景</div>
     <ul class="scenarios"><li>长视频内容创作</li>
-<li>影视制作</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>解决长视频生成关键瓶颈，对AIGC视频产业具有直接应用价值</div>
+<li>视频编辑与续生成</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>来自宋晗实验室，将RAG思想迁移到视频生成，方法通用，影响长视频生成方向。</div>
     <div class="links">
       <a href="https://arxiv.org/abs/2606.02553v1" target="_blank" rel="noopener">📄 Abstract</a>
       <a href="https://arxiv.org/pdf/2606.02553v1" target="_blank" rel="noopener">📥 PDF</a>
@@ -323,16 +323,16 @@
     </div>
     <h2><a href="https://arxiv.org/abs/2606.02569v1" target="_blank" rel="noopener">AdaCodec: A Predictive Visual Code for Video MLLMs</a></h2>
     <p class="authors">Haowen Hou · Zhen Huang · Zheming Liang · et al.</p>
-    <p class="highlight">视频MLLM的预测式视觉码本</p>
-    <p class="brief">针对视频MLLM逐帧独立编码导致视觉token高度冗余的问题，AdaCodec提出预测式视觉码本，通过帧间预测大幅减少token数同时保持理解性能。</p>
+    <p class="highlight">预测式视觉码本压缩Video MLLM</p>
+    <p class="brief">视频帧间存在大量冗余，现有Video MLLM逐帧独立编码浪费token，提出预测式视觉码本AdaCodec高效压缩。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>预测式码本设计</li>
-<li>显著降低token冗余</li>
-<li>保持视频理解性能</li></ul>
+    <ul class="advantages"><li>帧间预测减少冗余token</li>
+<li>显著压缩视觉token数量</li>
+<li>通用多模态加速方案</li></ul>
     <div class="section-label">应用场景</div>
     <ul class="scenarios"><li>长视频理解</li>
-<li>视频问答系统</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>视频MLLM高效编码的关键方案，惠及所有长视频多模态任务</div>
+<li>多模态对话系统</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>解决Video MLLM的token爆炸瓶颈，方法简洁，对实际部署价值高。</div>
     <div class="links">
       <a href="https://arxiv.org/abs/2606.02569v1" target="_blank" rel="noopener">📄 Abstract</a>
       <a href="https://arxiv.org/pdf/2606.02569v1" target="_blank" rel="noopener">📥 PDF</a>
@@ -343,71 +343,46 @@
   <article class="card">
     <div class="card-head">
       <span class="rank">#4</span>
-      <span class="cat">LLM 训练 / 微调</span>
-      <span class="primary-cat">LG</span>
+      <span class="cat">3D / 视觉生成</span>
+      <span class="primary-cat">CV</span>
     </div>
-    <h2><a href="https://arxiv.org/abs/2606.02437v1" target="_blank" rel="noopener">On the Scaling of PEFT: Towards Million Personal Models of Trillion Parameters</a></h2>
-    <p class="authors">Mind Lab ·  : · Song Cao · et al.</p>
-    <p class="highlight">PEFT作为百万个人模型的本地状态</p>
-    <p class="brief">重新审视PEFT角色，提出将其视为共享基础模型上的持久本地状态，论证百万级PEFT模块可在万亿参数底座上共存，开辟大规模个性化模型新范式。</p>
+    <h2><a href="https://arxiv.org/abs/2606.02580v1" target="_blank" rel="noopener">Thinking in Blender: Staged Executable Inverse Graphics with Vision-Language Models</a></h2>
+    <p class="authors">Guangzhao He · Rundong Luo · Wei-Chiu Ma · et al.</p>
+    <p class="highlight">VLM直接生成可编辑3D场景</p>
+    <p class="brief">探索VLM是否可执行逆图形任务，从单图生成可在Blender中编辑、可重光照、可操控的3D场景。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>重定义PEFT角色</li>
-<li>个性化模型新范式</li>
-<li>面向百万级部署</li></ul>
+    <ul class="advantages"><li>VLM直接生成可执行3D代码</li>
+<li>分阶段逆向图形管线</li>
+<li>支持可编辑可重光照场景</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>个性化AI助手</li>
-<li>大规模模型定制</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>为LLM大规模个性化部署提供全新视角与可行路径，潜在影响深远</div>
+    <ul class="scenarios"><li>3D内容创作</li>
+<li>视觉逆向工程</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>康奈尔团队将VLM与3D结合，是逆图形长期目标的新范式，影响力大。</div>
     <div class="links">
-      <a href="https://arxiv.org/abs/2606.02437v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2606.02437v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2606.02437v1" target="_blank" rel="noopener">🌐 HTML</a>
+      <a href="https://arxiv.org/abs/2606.02580v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2606.02580v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2606.02580v1" target="_blank" rel="noopener">🌐 HTML</a>
     </div>
   </article>
 
   <article class="card">
     <div class="card-head">
       <span class="rank">#5</span>
-      <span class="cat">Agent / 工具调用</span>
-      <span class="primary-cat">LG</span>
-    </div>
-    <h2><a href="https://arxiv.org/abs/2606.02388v1" target="_blank" rel="noopener">Policy and World Modeling Co-Training for Language Agents</a></h2>
-    <p class="authors">Ning Lu · Baijiong Lin · Shengcai Liu · et al.</p>
-    <p class="highlight">语言智能体的策略与世界模型协同训练</p>
-    <p class="brief">针对RL训练语言智能体缺乏环境动态监督的问题，提出策略与世界模型协同训练框架，无需独立仿真器即可让智能体学习环境反馈信号。</p>
-    <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>策略与世界模型联合</li>
-<li>无需独立仿真器</li>
-<li>利用环境动态信号</li></ul>
-    <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>智能体任务执行</li>
-<li>交互式决策系统</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>为语言智能体训练开辟新方向，提升环境理解与决策能力</div>
-    <div class="links">
-      <a href="https://arxiv.org/abs/2606.02388v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2606.02388v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2606.02388v1" target="_blank" rel="noopener">🌐 HTML</a>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="card-head">
-      <span class="rank">#6</span>
       <span class="cat">对齐 / 安全</span>
       <span class="primary-cat">AI</span>
     </div>
     <h2><a href="https://arxiv.org/abs/2606.02530v1" target="_blank" rel="noopener">SafeSteer: Localized On-Policy Distillation for Efficient Safety Alignment</a></h2>
     <p class="authors">Hao Li · Jingkun An · Zijun Song · et al.</p>
-    <p class="highlight">局部on-policy蒸馏的高效安全对齐</p>
-    <p class="brief">针对LLM安全对齐中的能力损失(对齐税)问题，提出SafeSteer方法，采用局部on-policy蒸馏策略，避免依赖大量通用数据与辅助奖励模型。</p>
+    <p class="highlight">本地化蒸馏减轻LLM安全对齐税</p>
+    <p class="brief">现有安全对齐存在对齐税问题，提出本地化on-policy蒸馏方法SafeSteer，高效完成安全对齐。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>显著减少对齐税</li>
-<li>局部on-policy蒸馏</li>
+    <ul class="advantages"><li>本地化蒸馏减少对齐税</li>
+<li>无需大规模通用数据</li>
 <li>无需辅助奖励模型</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>LLM安全部署</li>
-<li>内容安全审核</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>为安全对齐提供低开销高效率方案，对工业部署尤其实用</div>
+    <ul class="scenarios"><li>LLM安全对齐</li>
+<li>模型发布前加固</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>为实际部署中平衡能力与安全提供轻量实用方案。</div>
     <div class="links">
       <a href="https://arxiv.org/abs/2606.02530v1" target="_blank" rel="noopener">📄 Abstract</a>
       <a href="https://arxiv.org/pdf/2606.02530v1" target="_blank" rel="noopener">📥 PDF</a>
@@ -417,101 +392,126 @@
 
   <article class="card">
     <div class="card-head">
+      <span class="rank">#6</span>
+      <span class="cat">LLM 推理 / 加速</span>
+      <span class="primary-cat">CL</span>
+    </div>
+    <h2><a href="https://arxiv.org/abs/2606.02559v1" target="_blank" rel="noopener">From Layers to Submodules: Rethinking Granularity in Replacement-Based LLM Compression</a></h2>
+    <p class="authors">Elia Cunegatti · Marcus Vukojevic · Erik Nielsen · et al.</p>
+    <p class="highlight">子模块粒度重塑LLM压缩</p>
+    <p class="brief">挑战现有LLM压缩的整层替换范式，提出子模块级非连续选择粒度，实现更细粒度压缩。</p>
+    <div class="section-label">核心优势</div>
+    <ul class="advantages"><li>子模块级更细粒度</li>
+<li>支持非连续层选择</li>
+<li>突破整层压缩限制</li></ul>
+    <div class="section-label">应用场景</div>
+    <ul class="scenarios"><li>LLM部署压缩</li>
+<li>边缘端推理</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>对LLM压缩基础假设提出新视角，可能引领新一代压缩算法。</div>
+    <div class="links">
+      <a href="https://arxiv.org/abs/2606.02559v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2606.02559v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2606.02559v1" target="_blank" rel="noopener">🌐 HTML</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-head">
       <span class="rank">#7</span>
-      <span class="cat">多模态 / VLM</span>
+      <span class="cat">LLM 训练 / 微调</span>
       <span class="primary-cat">LG</span>
     </div>
-    <h2><a href="https://arxiv.org/abs/2606.02521v1" target="_blank" rel="noopener">Drifting Preference Optimization for One-Step Generative Models</a></h2>
-    <p class="authors">Zhou Jiang · Yandong Wen · Zhen Liu</p>
-    <p class="highlight">一步生成模型的偏好对齐新方法</p>
-    <p class="brief">针对一步文生图生成器难以进行偏好微调的难题，提出Drifting Preference Optimization，绕开对策略似然和去噪轨迹的依赖，实现一步生成器对齐。</p>
+    <h2><a href="https://arxiv.org/abs/2606.02437v1" target="_blank" rel="noopener">On the Scaling of PEFT: Towards Million Personal Models of Trillion Parameters</a></h2>
+    <p class="authors">Mind Lab ·  : · Song Cao · et al.</p>
+    <p class="highlight">PEFT作为百万级个性化本地状态</p>
+    <p class="brief">重新审视PEFT角色：将其视为基础模型上的持久本地状态，可承载百万级个性化适配。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>专为一步生成设计</li>
-<li>无需去噪轨迹</li>
-<li>实现高效偏好对齐</li></ul>
+    <ul class="advantages"><li>重新定义PEFT为本地状态</li>
+<li>支持百万级个性化模型</li>
+<li>适配万亿参数基座</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>一步图像生成</li>
-<li>高效生成模型对齐</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>解决一步生成器对齐难题，对高效生成模型部署具有重要价值</div>
+    <ul class="scenarios"><li>个性化LLM服务</li>
+<li>终端设备本地适配</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>提出PEFT作为可扩展个性化基础设施新范式，对未来LLM服务架构影响深远。</div>
     <div class="links">
-      <a href="https://arxiv.org/abs/2606.02521v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2606.02521v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2606.02521v1" target="_blank" rel="noopener">🌐 HTML</a>
+      <a href="https://arxiv.org/abs/2606.02437v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2606.02437v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2606.02437v1" target="_blank" rel="noopener">🌐 HTML</a>
     </div>
   </article>
 
   <article class="card">
     <div class="card-head">
       <span class="rank">#8</span>
-      <span class="cat">机器人 / 具身</span>
-      <span class="primary-cat">RO</span>
+      <span class="cat">Agent / 工具调用</span>
+      <span class="primary-cat">AI</span>
     </div>
-    <h2><a href="https://arxiv.org/abs/2606.02577v1" target="_blank" rel="noopener">RoboDream: Compositional World Models for Scalable Robot Data Synthesis</a></h2>
-    <p class="authors">Junjie Ye · Rong Xue · Basile Van Hoorick · et al.</p>
-    <p class="highlight">组合式世界模型的可扩展机器人数据合成</p>
-    <p class="brief">针对机器人学习真实数据采集昂贵问题，提出RoboDream，利用组合式世界模型规模化合成多样化机器人演示数据，突破数据规模瓶颈。</p>
+    <h2><a href="https://arxiv.org/abs/2606.02484v1" target="_blank" rel="noopener">Iteris: Agentic Research Loops for Computational Mathematics</a></h2>
+    <p class="authors">Leheng Chen · Zihao Liu · Wanyi He · et al.</p>
+    <p class="highlight">智能体研究循环驱动计算数学发现</p>
+    <p class="brief">面向计算数学开放问题，提出Iteris智能体研究循环系统，自主驱动科研发现与方法创新。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>组合式世界模型</li>
-<li>可扩展数据合成</li>
-<li>多样化演示生成</li></ul>
+    <ul class="advantages"><li>智能体驱动的研究循环</li>
+<li>面向计算数学开放问题</li>
+<li>自动化发现新方法</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>机器人模仿学习</li>
-<li>具身智能数据增强</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>突破机器人数据规模瓶颈，对具身智能大规模训练至关重要</div>
+    <ul class="scenarios"><li>计算数学研究</li>
+<li>AI for Science</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>推动AI Agent从答题走向做研究，对科学发现自动化具启发意义。</div>
     <div class="links">
-      <a href="https://arxiv.org/abs/2606.02577v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2606.02577v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2606.02577v1" target="_blank" rel="noopener">🌐 HTML</a>
+      <a href="https://arxiv.org/abs/2606.02484v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2606.02484v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2606.02484v1" target="_blank" rel="noopener">🌐 HTML</a>
     </div>
   </article>
 
   <article class="card">
     <div class="card-head">
       <span class="rank">#9</span>
-      <span class="cat">机器人 / 具身</span>
-      <span class="primary-cat">RO</span>
+      <span class="cat">Agent / 工具调用</span>
+      <span class="primary-cat">LG</span>
     </div>
-    <h2><a href="https://arxiv.org/abs/2606.02551v1" target="_blank" rel="noopener">AFUN: Towards an Affordance Foundation Model for Functionality Understanding</a></h2>
-    <p class="authors">Zhaoning Wang · Yi Zhong · Jiawei Fu · et al.</p>
-    <p class="highlight">机器人功能理解的Affordance基础模型</p>
-    <p class="brief">针对开放环境中机器人操作缺乏可解释接口问题，提出AFUN——首个affordance基础模型，可同时理解交互位置与方式，桥接视觉感知与物理动作。</p>
+    <h2><a href="https://arxiv.org/abs/2606.02388v1" target="_blank" rel="noopener">Policy and World Modeling Co-Training for Language Agents</a></h2>
+    <p class="authors">Ning Lu · Baijiong Lin · Shengcai Liu · et al.</p>
+    <p class="highlight">策略与世界模型协同训练Agent</p>
+    <p class="brief">RL教Agent做什么，World Model监督行动对环境的影响，提出二者协同训练框架。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>首个affordance基础模型</li>
-<li>可解释交互接口</li>
-<li>开放环境操作</li></ul>
+    <ul class="advantages"><li>策略与世界模型联合训练</li>
+<li>无需独立环境模拟器</li>
+<li>充分利用RL与WM优势</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>机器人操作任务</li>
-<li>具身导航</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>为机器人通用操作提供关键感知基础，有望成为领域基础模型</div>
+    <ul class="scenarios"><li>通用语言Agent</li>
+<li>复杂决策任务</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>解决RL训练Agent缺乏环境动态监督的痛点，方法通用，影响Agent训练方法论。</div>
     <div class="links">
-      <a href="https://arxiv.org/abs/2606.02551v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2606.02551v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2606.02551v1" target="_blank" rel="noopener">🌐 HTML</a>
+      <a href="https://arxiv.org/abs/2606.02388v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2606.02388v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2606.02388v1" target="_blank" rel="noopener">🌐 HTML</a>
     </div>
   </article>
 
   <article class="card">
     <div class="card-head">
       <span class="rank">#10</span>
-      <span class="cat">多模态 / VLM</span>
-      <span class="primary-cat">CV</span>
+      <span class="cat">3D / 视觉生成</span>
+      <span class="primary-cat">LG</span>
     </div>
-    <h2><a href="https://arxiv.org/abs/2606.02564v1" target="_blank" rel="noopener">VLMs are Good Teachers for Video Reasoning via Adaptive Test-Time Optimization</a></h2>
-    <p class="authors">Junhao Cheng · Liang Hou · Tianxiong Zhong · et al.</p>
-    <p class="highlight">VLM教师指导视频生成的自适应测试时优化</p>
-    <p class="brief">针对视频生成模型在任务特定规则理解上的不足，提出利用VLM作为教师在测试时自适应优化视频生成轨迹，更好完成视频推理任务。</p>
+    <h2><a href="https://arxiv.org/abs/2606.02521v1" target="_blank" rel="noopener">Drifting Preference Optimization for One-Step Generative Models</a></h2>
+    <p class="authors">Zhou Jiang · Yandong Wen · Zhen Liu</p>
+    <p class="highlight">一步生成器的偏好对齐新方法</p>
+    <p class="brief">一步式文生图模型偏好微调困难，提出漂移偏好优化方法，无需策略似然或轨迹梯度。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>VLM教师指导生成</li>
-<li>测试时自适应优化</li>
-<li>提升任务遵循性</li></ul>
+    <ul class="advantages"><li>专为一步生成器设计</li>
+<li>无需似然与轨迹监督</li>
+<li>兼容多种奖励信号</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>视频推理任务</li>
-<li>视觉决策规划</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>创新性地将VLM作为视频生成导师，开辟视频推理新研究方向</div>
+    <ul class="scenarios"><li>一步式文生图对齐</li>
+<li>实时图像生成</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>填补一步生成器偏好对齐方法空白，对部署高效文生图模型具实用价值。</div>
     <div class="links">
-      <a href="https://arxiv.org/abs/2606.02564v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2606.02564v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2606.02564v1" target="_blank" rel="noopener">🌐 HTML</a>
+      <a href="https://arxiv.org/abs/2606.02521v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2606.02521v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2606.02521v1" target="_blank" rel="noopener">🌐 HTML</a>
     </div>
   </article>
 
@@ -520,7 +520,7 @@
       数据来源：<a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv.org</a> (cs.AI · cs.LG · cs.CL · cs.CV) ·
       分析：<a href="https://github.com/MiniMax-AI" target="_blank" rel="noopener">MiniMax-M3</a>
     </p>
-    <p>自动生成于 2026-06-02 15:07 · <a href="archive.html">历史归档</a></p>
+    <p>自动生成于 2026-06-02 15:36 · <a href="archive.html">历史归档</a></p>
   </footer>
 </div>
 </body>
