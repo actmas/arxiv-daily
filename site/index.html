@@ -261,7 +261,7 @@
     <div class="stats">
       <span class="stat"><strong>10</strong> 篇精选</span>
       <span class="stat">从 <strong>60</strong> 篇候选</span>
-      <span class="stat">LLM 推理 / 加速 <strong>4</strong> · LLM 训练 / 微调 <strong>3</strong> · 理论 / 优化 <strong>1</strong> · 3D / 视觉生成 <strong>1</strong></span>
+      <span class="stat">LLM 推理 / 加速 <strong>3</strong> · Agent / 工具调用 <strong>2</strong> · LLM 训练 / 微调 <strong>2</strong> · 理论 / 优化 <strong>1</strong></span>
     </div>
   </header>
 
@@ -273,16 +273,16 @@
     </div>
     <h2><a href="https://arxiv.org/abs/2606.06467v1" target="_blank" rel="noopener">You Only Index Once: Cross-Layer Sparse Attention with Shared Routing</a></h2>
     <p class="authors">Yutao Sun · Yanqi Zhang · Li Dong · et al.</p>
-    <p class="highlight">跨层稀疏注意力机制，长推理场景加速利器</p>
-    <p class="brief">论文提出 YOI 方法，通过跨层共享路由实现块稀疏注意力，解决长上下文推理模型解码效率瓶颈。方法在保持质量的同时显著降低 KV 访问与计算成本。</p>
+    <p class="highlight">跨层共享路由稀疏注意力，加速长文本推理</p>
+    <p class="brief">针对长上下文推理中注意力效率瓶颈，提出跨层稀疏注意力YOI，通过共享索引路由减少KV缓存与计算，在保持质量同时显著提升长文本生成速度。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>跨层共享索引减少冗余</li>
-<li>块稀疏路由质量更高</li>
-<li>长链推理显著加速</li></ul>
+    <ul class="advantages"><li>跨层共享索引路由</li>
+<li>显著降低KV缓存</li>
+<li>长链思维推理加速</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>长上下文推理部署</li>
-<li>推理模型服务</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>微软亚洲团队系统性稀疏注意力方案，对 DeepSeek-R1 风格长 CoT 推理部署极具实用价值。</div>
+    <ul class="scenarios"><li>长上下文LLM推理</li>
+<li>思维链生成加速</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>微软Furu Wei组出品，正中长CoT推理中最关键的长上下文效率痛点</div>
     <div class="links">
       <a href="https://arxiv.org/abs/2606.06467v1" target="_blank" rel="noopener">📄 Abstract</a>
       <a href="https://arxiv.org/pdf/2606.06467v1" target="_blank" rel="noopener">📥 PDF</a>
@@ -298,16 +298,16 @@
     </div>
     <h2><a href="https://arxiv.org/abs/2606.06479v1" target="_blank" rel="noopener">Pretraining Recurrent Networks without Recurrence</a></h2>
     <p class="authors">Akarsh Kumar · Phillip Isola</p>
-    <p class="highlight">无需循环的RNN预训练新范式</p>
-    <p class="brief">论文探索在预训练阶段以非循环方式训练 RNN，借助并行优化器绕过 BPTT 顺序瓶颈。目标是在保留循环推理能力的同时获得 Transformer 级别的训练效率。</p>
+    <p class="highlight">无循环预训练RNN，Isola组新作</p>
+    <p class="brief">提出在预训练阶段去除循环结构，用截断反向传播等并行方法训练RNN，避免BPTT的时序依赖与梯度问题，实现RNN的高效并行训练。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>绕过 BPTT 顺序瓶颈</li>
-<li>支持大规模并行训练</li>
-<li>保留循环推理特性</li></ul>
+    <ul class="advantages"><li>去除训练时循环依赖</li>
+<li>支持高效并行预训练</li>
+<li>保留RNN推理优势</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>长序列语言建模</li>
-<li>序列模型架构探索</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>Phillip Isola 团队对序列建模特性的新视角，可能催生新型高效序列模型架构。</div>
+    <ul class="scenarios"><li>高效序列建模</li>
+<li>RNN架构复兴研究</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>MIT Phillip Isola团队，对RNN能否替代Transformer的争论提供新视角</div>
     <div class="links">
       <a href="https://arxiv.org/abs/2606.06479v1" target="_blank" rel="noopener">📄 Abstract</a>
       <a href="https://arxiv.org/pdf/2606.06479v1" target="_blank" rel="noopener">📥 PDF</a>
@@ -318,100 +318,100 @@
   <article class="card">
     <div class="card-head">
       <span class="rank">#3</span>
-      <span class="cat">LLM 推理 / 加速</span>
-      <span class="primary-cat">CL</span>
+      <span class="cat">3D / 视觉生成</span>
+      <span class="primary-cat">CV</span>
     </div>
-    <h2><a href="https://arxiv.org/abs/2606.06474v1" target="_blank" rel="noopener">Self-Augmenting Retrieval for Diffusion Language Models</a></h2>
-    <p class="authors">Paul Jünger · Justin Lovelace · Linxi Zhao · et al.</p>
-    <p class="highlight">扩散语言模型的自增强检索</p>
-    <p class="brief">论文发现离散扩散 LM 在每步去噪中丢弃的低置信 token 仍可作为外部记忆使用，提出自增强检索机制提升生成质量，方法不增加额外参数。</p>
+    <h2><a href="https://arxiv.org/abs/2606.06477v1" target="_blank" rel="noopener">Complexity-Balanced Diffusion Splitting</a></h2>
+    <p class="authors">Noam Issachar · Dani Lischinski · Raanan Fattal</p>
+    <p class="highlight">复杂度均衡的扩散模型分割生成策略</p>
+    <p class="brief">传统连续时间生成模型用单一网络处理从各向同性噪声到复杂数据分布的巨大差异。本文按复杂度分割生成过程，让不同子网络负责不同信号机制。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>零参数成本提升质量</li>
-<li>复用丢弃 token 作记忆</li>
-<li>适配多种扩散 LM</li></ul>
+    <ul class="advantages"><li>按复杂度分配容量</li>
+<li>子网络专业化生成</li>
+<li>提升生成质量效率</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>扩散语言模型推理</li>
-<li>生成质量增强</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>Weinberger 团队对扩散 LM 的精巧改进，方法简单且具备可推广性。</div>
+    <ul class="scenarios"><li>高分辨率图像生成</li>
+<li>视频扩散加速</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>Lischinski与Fattal等知名作者，扩散模型架构设计的新颖思路</div>
     <div class="links">
-      <a href="https://arxiv.org/abs/2606.06474v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2606.06474v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2606.06474v1" target="_blank" rel="noopener">🌐 HTML</a>
+      <a href="https://arxiv.org/abs/2606.06477v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2606.06477v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2606.06477v1" target="_blank" rel="noopener">🌐 HTML</a>
     </div>
   </article>
 
   <article class="card">
     <div class="card-head">
       <span class="rank">#4</span>
-      <span class="cat">LLM 训练 / 微调</span>
-      <span class="primary-cat">LG</span>
+      <span class="cat">多模态 / VLM</span>
+      <span class="primary-cat">CV</span>
     </div>
-    <h2><a href="https://arxiv.org/abs/2606.06470v1" target="_blank" rel="noopener">PC Layer: Polynomial Weight Preconditioning for Improving LLM Pre-Training</a></h2>
-    <p class="authors">Senmiao Wang · Tiantian Fang · Haoran Zhang · et al.</p>
-    <p class="highlight">多项式预条件层改善LLM训练</p>
-    <p class="brief">论文提出 PC Layer，通过低阶多项式预条件参数化重塑权重奇异值谱，保证训练全程稳定的权重条件数。训练后多项式可被吸收回原参数。</p>
+    <h2><a href="https://arxiv.org/abs/2606.06485v1" target="_blank" rel="noopener">PAR3D: A Unified 3D-MLLM with Part-Aware Representation for Scene Understanding</a></h2>
+    <p class="authors">Shaohui Dai · Yansong Qu · You Shen · et al.</p>
+    <p class="highlight">部件感知3D-MLLM，统一场景理解新范式</p>
+    <p class="brief">现有3D多模态大模型以物体为中心，缺乏对细粒度部件的建模。PAR3D引入部件感知表示，在统一框架中支持VQA、字幕、引用分割等多任务。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>稳定权重条件数</li>
-<li>可吸收回原参数</li>
-<li>训练即插即用</li></ul>
+    <ul class="advantages"><li>部件级细粒度建模</li>
+<li>统一多任务3D理解</li>
+<li>增强场景可解释性</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>大规模 LLM 预训练</li>
-<li>训练稳定性优化</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>直接针对 LLM 预训练中病态条件问题，方法通用且易部署到现有训练栈。</div>
+    <ul class="scenarios"><li>3D场景问答</li>
+<li>机器人室内感知</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>突破3D-MLLM物体中心局限，对具身AI与3D应用关键</div>
     <div class="links">
-      <a href="https://arxiv.org/abs/2606.06470v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2606.06470v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2606.06470v1" target="_blank" rel="noopener">🌐 HTML</a>
+      <a href="https://arxiv.org/abs/2606.06485v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2606.06485v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2606.06485v1" target="_blank" rel="noopener">🌐 HTML</a>
     </div>
   </article>
 
   <article class="card">
     <div class="card-head">
       <span class="rank">#5</span>
-      <span class="cat">LLM 推理 / 加速</span>
-      <span class="primary-cat">AI</span>
+      <span class="cat">Agent / 工具调用</span>
+      <span class="primary-cat">CV</span>
     </div>
-    <h2><a href="https://arxiv.org/abs/2606.06453v1" target="_blank" rel="noopener">Vortex: Efficient and Programmable Sparse Attention Serving for AI Agents</a></h2>
-    <p class="authors">Zhuoming Chen · Xinrui Zhong · Qilong Feng · et al.</p>
-    <p class="highlight">面向AI Agent的高效可编程稀疏注意力服务</p>
-    <p class="brief">论文提出 Vortex 框架，将稀疏注意力算法以可编程方式集成进 LLM 服务栈，专门优化 AI Agent 长生成场景。降低研究人员与 Agent 评估新稀疏方案的工程门槛。</p>
+    <h2><a href="https://arxiv.org/abs/2606.06476v1" target="_blank" rel="noopener">Thinking with Imagination: Agentic Visual Spatial Reasoning with World Simulators</a></h2>
+    <p class="authors">Chenming Zhu · Jingli Lin · Yilin Long · et al.</p>
+    <p class="highlight">用世界模拟器驱动想象力空间推理</p>
+    <p class="brief">VLM空间推理受限于观察图像，缺乏对未观察布局的推断能力。本文提出Agentic框架，将世界模拟器作为推理工具，让VLM通过想象未观察视角完成空间任务。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>可编程稀疏注意力算子</li>
-<li>面向 Agent 长生成优化</li>
-<li>降低部署与评估门槛</li></ul>
+    <ul class="advantages"><li>世界模型作为推理工具</li>
+<li>跨视角一致性建模</li>
+<li>Agentic空间推理</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>LLM 推理服务优化</li>
-<li>AI Agent 长任务执行</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>把稀疏注意力从论文推向生产 Agent 系统，对工程实践与学术评估都很有价值。</div>
+    <ul class="scenarios"><li>机器人空间导航</li>
+<li>3D场景理解</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>将世界模拟器引入VLM推理链，对具身智能和空间AI具有重要启发</div>
     <div class="links">
-      <a href="https://arxiv.org/abs/2606.06453v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2606.06453v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2606.06453v1" target="_blank" rel="noopener">🌐 HTML</a>
+      <a href="https://arxiv.org/abs/2606.06476v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2606.06476v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2606.06476v1" target="_blank" rel="noopener">🌐 HTML</a>
     </div>
   </article>
 
   <article class="card">
     <div class="card-head">
       <span class="rank">#6</span>
-      <span class="cat">3D / 视觉生成</span>
-      <span class="primary-cat">CV</span>
+      <span class="cat">LLM 推理 / 加速</span>
+      <span class="primary-cat">CL</span>
     </div>
-    <h2><a href="https://arxiv.org/abs/2606.06477v1" target="_blank" rel="noopener">Complexity-Balanced Diffusion Splitting</a></h2>
-    <p class="authors">Noam Issachar · Dani Lischinski · Raanan Fattal</p>
-    <p class="highlight">复杂度均衡的扩散分裂采样</p>
-    <p class="brief">论文针对连续生成模型在噪声到数据不同信号区间的能力分配失衡问题，提出按复杂度动态分裂扩散过程的方法，让模型在最难区段调用更多算力。</p>
+    <h2><a href="https://arxiv.org/abs/2606.06474v1" target="_blank" rel="noopener">Self-Augmenting Retrieval for Diffusion Language Models</a></h2>
+    <p class="authors">Paul Jünger · Justin Lovelace · Linxi Zhao · et al.</p>
+    <p class="highlight">自增强检索提升离散扩散语言模型</p>
+    <p class="brief">离散扩散LM在每步denoising时会丢弃低置信token。本文证明这些被丢弃token包含有价值的中间信息，可作为下一步的自检索增强，无需外部知识库。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>按复杂度动态分配算力</li>
-<li>避免简单段浪费算力</li>
-<li>提升生成质量效率比</li></ul>
+    <ul class="advantages"><li>利用被丢弃token信息</li>
+<li>自增强无需外部库</li>
+<li>提升扩散LM生成质量</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>高分辨率图像生成</li>
-<li>视频扩散模型加速</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>Dani Lischinski 与 Raanan Fattal 团队对扩散模型效率机制的新思考。</div>
+    <ul class="scenarios"><li>扩散语言模型推理</li>
+<li>并行文本生成</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>Cornell Weinberger组出品，扩散语言模型这一新兴方向的关键创新</div>
     <div class="links">
-      <a href="https://arxiv.org/abs/2606.06477v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2606.06477v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2606.06477v1" target="_blank" rel="noopener">🌐 HTML</a>
+      <a href="https://arxiv.org/abs/2606.06474v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2606.06474v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2606.06474v1" target="_blank" rel="noopener">🌐 HTML</a>
     </div>
   </article>
 
@@ -423,16 +423,16 @@
     </div>
     <h2><a href="https://arxiv.org/abs/2606.06447v1" target="_blank" rel="noopener">Latent Reasoning with Normalizing Flows</a></h2>
     <p class="authors">Guancheng Tu · Xiangjun Fu · Suhao Yu · et al.</p>
-    <p class="highlight">用归一化流实现潜在空间推理</p>
-    <p class="brief">论文提出用归一化流在连续潜在空间执行推理，避免显式 CoT 必须把推理步骤口述为离散 token 的限制，支持更灵活、更高效的多步推理。</p>
+    <p class="highlight">归一化流实现连续潜在空间推理</p>
+    <p class="brief">显式CoT推理需将中间计算串行verbalize为离散token，限制效率。本文用归一化流将推理嵌入连续潜在空间，实现更高效灵活的隐式推理。</p>
     <div class="section-label">核心优势</div>
     <ul class="advantages"><li>连续潜在空间推理</li>
-<li>摆脱离散 token 序列化</li>
-<li>支持多步复杂推理</li></ul>
+<li>避免CoT串行瓶颈</li>
+<li>NF建模推理分布</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>数学与逻辑推理</li>
-<li>需要隐式中间步骤的任务</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>为推理模型开辟超越 CoT 的新方向，可能启发下一代替代架构。</div>
+    <ul class="scenarios"><li>高效推理模型</li>
+<li>复杂数学推理</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>隐式推理热门方向给出基于归一化流的新颖架构选择</div>
     <div class="links">
       <a href="https://arxiv.org/abs/2606.06447v1" target="_blank" rel="noopener">📄 Abstract</a>
       <a href="https://arxiv.org/pdf/2606.06447v1" target="_blank" rel="noopener">📥 PDF</a>
@@ -448,16 +448,16 @@
     </div>
     <h2><a href="https://arxiv.org/abs/2606.06475v1" target="_blank" rel="noopener">RREDCoT: Segment-Level Reward Redistribution for Reasoning Models</a></h2>
     <p class="authors">Mykyta Ielanskyi · Kajetan Schweighofer · Lukas Aichberger · et al.</p>
-    <p class="highlight">段级奖励重分配提升推理模型</p>
-    <p class="brief">论文针对 GRPO 等方法只能对最终答案分配奖励的问题，提出 RREDCoT 在 CoT 段级层面重分配奖励信号，显著提升推理模型长链思维的训练效率。</p>
+    <p class="highlight">段级奖励重分配，让CoT训练更精准</p>
+    <p class="brief">现有GRPO类方法只对最终答案做奖励，对长CoT中各步骤贡献缺乏区分。RREDCoT按段重分配奖励，让中间推理步骤获得恰当的信用，提升训练信号密度。</p>
     <div class="section-label">核心优势</div>
     <ul class="advantages"><li>段级细粒度奖励</li>
-<li>缓解稀疏奖励问题</li>
-<li>与 GRPO 框架兼容</li></ul>
+<li>优化CoT信用分配</li>
+<li>提升推理训练效率</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>推理模型 RL 微调</li>
-<li>数学与代码推理训练</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>Sepp Hochreiter 团队对推理模型 RL 关键瓶颈的针对性改进，方法实用可落地。</div>
+    <ul class="scenarios"><li>推理模型RL微调</li>
+<li>长CoT训练</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>Sepp Hochreiter组出品，对推理模型RL训练关键问题提出实用方案</div>
     <div class="links">
       <a href="https://arxiv.org/abs/2606.06475v1" target="_blank" rel="noopener">📄 Abstract</a>
       <a href="https://arxiv.org/pdf/2606.06475v1" target="_blank" rel="noopener">📥 PDF</a>
@@ -469,24 +469,24 @@
     <div class="card-head">
       <span class="rank">#9</span>
       <span class="cat">LLM 训练 / 微调</span>
-      <span class="primary-cat">SE</span>
+      <span class="primary-cat">LG</span>
     </div>
-    <h2><a href="https://arxiv.org/abs/2606.06492v1" target="_blank" rel="noopener">Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution</a></h2>
-    <p class="authors">Liliana Hotsko · Yinxi Li · Yuntian Deng · et al.</p>
-    <p class="highlight">超网络生成代码LoRA适配器</p>
-    <p class="brief">论文提出 Code2LoRA，用超网络根据仓库上下文动态生成 LoRA 适配器，替代昂贵的长上下文 RAG 或全仓库微调，解决软件演化下代码模型适配痛点。</p>
+    <h2><a href="https://arxiv.org/abs/2606.06470v1" target="_blank" rel="noopener">PC Layer: Polynomial Weight Preconditioning for Improving LLM Pre-Training</a></h2>
+    <p class="authors">Senmiao Wang · Tiantian Fang · Haoran Zhang · et al.</p>
+    <p class="highlight">多项式预条件层，稳定LLM权重条件数</p>
+    <p class="brief">提出PC Layer作为权重参数化方法，通过低阶多项式预条件化重塑权重矩阵的奇异值谱，确保训练全程权重条件数稳定，训练后可无缝合并到原模型。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>超网络动态生成 LoRA</li>
-<li>避免长上下文 RAG 开销</li>
-<li>适应软件持续演化</li></ul>
+    <ul class="advantages"><li>多项式权重参数化</li>
+<li>稳定训练条件数</li>
+<li>训练后无损合并</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>代码仓库级适配</li>
-<li>企业级代码助手</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>Yuntian Deng 知名作者团队工作，为代码 LLM 仓库级适配提出高效解决方案。</div>
+    <ul class="scenarios"><li>LLM预训练优化</li>
+<li>大规模训练稳定性</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>一种轻量可合并的预条件方法，对大规模训练稳定性具有实用价值</div>
     <div class="links">
-      <a href="https://arxiv.org/abs/2606.06492v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2606.06492v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2606.06492v1" target="_blank" rel="noopener">🌐 HTML</a>
+      <a href="https://arxiv.org/abs/2606.06470v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2606.06470v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2606.06470v1" target="_blank" rel="noopener">🌐 HTML</a>
     </div>
   </article>
 
@@ -496,22 +496,22 @@
       <span class="cat">Agent / 工具调用</span>
       <span class="primary-cat">AI</span>
     </div>
-    <h2><a href="https://arxiv.org/abs/2606.06468v1" target="_blank" rel="noopener">Goedel-Architect: Streamlining Formal Theorem Proving with Blueprint Generation and Refinement</a></h2>
-    <p class="authors">Jui-Hui Chung · Ziyang Cai · Zihao Li · et al.</p>
-    <p class="highlight">蓝图驱动的形式定理证明Agent</p>
-    <p class="brief">论文提出 Goedel-Architect 框架，在 Lean 4 中先生成由定义和引理依赖图组成的高层蓝图，再据此迭代精化证明，显著提升自动形式证明的效率与可解释性。</p>
+    <h2><a href="https://arxiv.org/abs/2606.06473v1" target="_blank" rel="noopener">MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery</a></h2>
+    <p class="authors">Shangheng Du · Xiangchao Yan · Jinxin Shi · et al.</p>
+    <p class="highlight">自我演化的自动化ML算法发现框架</p>
+    <p class="brief">现有MLE智能体存在分支间信息隔离和无记忆搜索问题。MLEvolve通过自演化机制持续提升能力，在长时程机器学习工程任务中实现更高效的算法发现。</p>
     <div class="section-label">核心优势</div>
-    <ul class="advantages"><li>蓝图分解降低搜索空间</li>
-<li>依赖图引导证明顺序</li>
-<li>Lean 4 全流程集成</li></ul>
+    <ul class="advantages"><li>分支信息共享机制</li>
+<li>记忆增强搜索</li>
+<li>自演化能力</li></ul>
     <div class="section-label">应用场景</div>
-    <ul class="scenarios"><li>数学形式化证明</li>
-<li>AI for Math 自动化</li></ul>
-    <div class="why"><strong>为什么值得读：</strong>兼顾结构化与可解释性，对自动数学方向是重要推进，可与 Lean Copilot 等系统结合。</div>
+    <ul class="scenarios"><li>AutoML算法发现</li>
+<li>科研自动化</li></ul>
+    <div class="why"><strong>为什么值得读：</strong>AI for AI方向重要进展，对LLM智能体自演化研究具有启发</div>
     <div class="links">
-      <a href="https://arxiv.org/abs/2606.06468v1" target="_blank" rel="noopener">📄 Abstract</a>
-      <a href="https://arxiv.org/pdf/2606.06468v1" target="_blank" rel="noopener">📥 PDF</a>
-      <a href="https://arxiv.org/html/2606.06468v1" target="_blank" rel="noopener">🌐 HTML</a>
+      <a href="https://arxiv.org/abs/2606.06473v1" target="_blank" rel="noopener">📄 Abstract</a>
+      <a href="https://arxiv.org/pdf/2606.06473v1" target="_blank" rel="noopener">📥 PDF</a>
+      <a href="https://arxiv.org/html/2606.06473v1" target="_blank" rel="noopener">🌐 HTML</a>
     </div>
   </article>
 
@@ -520,7 +520,7 @@
       数据来源：<a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv.org</a> (cs.AI · cs.LG · cs.CL · cs.CV) ·
       分析：<a href="https://github.com/MiniMax-AI" target="_blank" rel="noopener">MiniMax-M3</a>
     </p>
-    <p>自动生成于 2026-06-07 12:06 · <a href="archive.html">历史归档</a></p>
+    <p>自动生成于 2026-06-07 12:48 · <a href="archive.html">历史归档</a></p>
   </footer>
 </div>
 </body>
