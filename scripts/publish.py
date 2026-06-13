@@ -4,7 +4,7 @@ Push site/ to the gh-pages branch using a worktree (clean, no destructive
 checkouts, no race conditions). Follows the pattern documented in
 github-pages-publishing skill.
 
-Reads GITHUB_TOKEN, GH_OWNER, GH_REPO from ~/.hermes/.env.
+Reads GH_OWNER and ARXIV_REPO from ~/.hermes/.env and publishes over SSH.
 """
 import re
 import shutil
@@ -12,9 +12,6 @@ import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from _token import get_token  # noqa: E402
 
 PROJECT = Path(__file__).resolve().parent.parent
 SITE = PROJECT / "site"
@@ -54,16 +51,12 @@ def main() -> str:
     if not (SITE / "index.html").exists():
         sys.exit("no site/index.html — run render_html.py first")
 
-    token = get_token()
-    if not token:
-        sys.exit("no GITHUB_TOKEN in ~/.hermes/.env")
-
-    remote_url = f"https://x-access-token:{token}@github.com/{OWNER}/{REPO}.git"
+    remote_url = f"git@github.com:{OWNER}/{REPO}.git"
 
     # 0. Switch to main (in case we're on gh-pages from a previous run)
     _run(["git", "checkout", BRANCH_MAIN], cwd=PROJECT, check=False)
 
-    # 1. Reset remote URL with token embedded
+    # 1. Reset remote URL to the SSH target for the current owner/repo
     _run(["git", "remote", "remove", "origin"], cwd=PROJECT, check=False)
     _run(["git", "remote", "add", "origin", remote_url], cwd=PROJECT)
 
@@ -113,7 +106,7 @@ def main() -> str:
     if not status.stdout.strip():
         print("  ⚠ nothing to commit on gh-pages", file=sys.stderr)
     else:
-        msg = f"publish: trending report {datetime.now().strftime('%Y-%m-%d')}"
+        msg = f"publish: arxiv report {datetime.now().strftime('%Y-%m-%d')}"
         _run(["git", "commit", "-m", msg], cwd=WORKTREE)
 
     # 9. Push (force is fine — Pages artifact is read-only)
